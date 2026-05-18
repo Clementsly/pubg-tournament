@@ -594,6 +594,8 @@ function setScrimDisplay(isoStr){
   const locale=lang==='fr'?'fr-FR':'en-GB';
   document.getElementById('scrimDateTxt').textContent=new Intl.DateTimeFormat(locale,opts).format(new Date(scrimTimestamp))+' (CEST)';
   document.getElementById('timerBlock').innerHTML=`
+    <div class="timer-unit" id="tDayUnit" style="display:none"><span class="timer-num" id="tD">00</span><span class="timer-lbl" id="tLblD">jours</span></div>
+    <span class="timer-sep" id="tSepD" style="display:none">:</span>
     <div class="timer-unit"><span class="timer-num" id="tH">00</span><span class="timer-lbl" id="tLblH">${t('lblH')}</span></div>
     <span class="timer-sep">:</span>
     <div class="timer-unit"><span class="timer-num" id="tM">00</span><span class="timer-lbl" id="tLblM">${t('lblM')}</span></div>
